@@ -4,6 +4,7 @@ const productRoutes = require('./routes/products-routes')
 
 const express = require('express')
 const cors = require('cors')
+const path = require('path')
 
 const app = express()
 const http = require('http').createServer(app)

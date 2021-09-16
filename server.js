@@ -1,11 +1,11 @@
 'use strict'
 
-const express = require('express')
-const cors = require('cors')
 const config = require('./config')
 
-
 const productRoutes = require('./routes/products-routes')
+
+const express = require('express')
+const cors = require('cors')
 
 const app = express()
 
@@ -16,5 +16,7 @@ app.use('/api', productRoutes.routes)
 
 app.listen(
     config.port,
-    () => console.log(`App is listening on port ${config.port}`)
+    () => {
+        console.log(`App is listening on port ${config.port}`)
+    } 
 )
